@@ -1,4 +1,4 @@
-package com.vamsi.softwareengineering.TimeManagementService.databasemodels;
+package com.vamsi.TimeManagementService.databasemodels;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,14 +1,16 @@
-package com.vamsi.softwareengineering.TimeManagementService.databasemodels;
+package com.vamsi.TimeManagementService.databasemodels;
 
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.sql.Timestamp;
 import java.util.List;
 
 @Setter
 @Getter
+@Document(collection = "meetings")
 public class MeetingDocument {
     @Id
     private String id;

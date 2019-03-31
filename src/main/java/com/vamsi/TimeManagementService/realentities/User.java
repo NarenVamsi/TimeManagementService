@@ -1,4 +1,4 @@
-package com.vamsi.softwareengineering.TimeManagementService.realentities;
+package com.vamsi.TimeManagementService.realentities;
 
 
 import lombok.Builder;

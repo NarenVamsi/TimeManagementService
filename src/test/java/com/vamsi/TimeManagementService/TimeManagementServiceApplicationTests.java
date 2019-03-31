@@ -1,4 +1,4 @@
-package com.vamsi.softwareengineering.TimeManagementService;
+package com.vamsi.TimeManagementService;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
