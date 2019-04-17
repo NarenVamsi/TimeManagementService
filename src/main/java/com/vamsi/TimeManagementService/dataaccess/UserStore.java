@@ -5,6 +5,8 @@ import com.vamsi.TimeManagementService.mongorepositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service("userStore")
 public class UserStore {
 
@@ -15,8 +17,12 @@ public class UserStore {
         userRepository.insert(userDocument);
     }
 
-    public UserDocument findByUsername(UserDocument userDocument) {
-        return userRepository.findByUserName(userDocument.getUserName());
+    public UserDocument findByUsername(String userName) {
+        return userRepository.findByUserName(userName);
+    }
+
+    public List<UserDocument> findAll() {
+        return userRepository.findAll();
     }
 
     public void save(UserDocument userDocument) {

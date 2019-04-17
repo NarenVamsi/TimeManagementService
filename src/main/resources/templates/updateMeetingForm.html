@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Meeting Form</title>
+</head>
+<body>
+<div style="width = 80%; height = 5%;margin: auto;"><h1>Time Management Software</h1></div>
+<a href="/greeting">Go back home</a>
+<form action="/updateCurrentMeeting" method="post">
+    <div><label> Date : <input type="number" name="meetingId" value ="{{meeting.meetingId}}" readonly/> </label></div>
+    <div><label> Date : <input type="date" name="date" value ="{{meeting.date}}" readonly/> </label></div>
+    <div><label> Description : <input type="text" name="description" value ="{{meeting.description}}" required/> </label></div>
+    <div><label> Start Hour : <input type="number" name="startHour" min="9" max="16" value ="{{meeting.startHour}}" required/> </label></div>
+    <div><label> End Hour : <input type="number" name="endHour" min="9" max="16" value ="{{meeting.endHour}}" required/> </label></div>
+    <div><label> Start Minute : <input type="number" name="startMinute" min="0" max="59" value ="{{meeting.startMinute}}" required/> </label></div>
+    <div><label> End Minute : <input type="number" name="endMinute" min="0" max="59" value ="{{meeting.endMinute}}" required/> </label></div>
+    <div><input type="submit" value="Update Meeting"/></div>
+    <p> Change time to update meeting </p>
+    {% if msg != "noError" %}
+    {{msg}}
+    {% endif %}
+
+</form>
+
+<div><a href="/deleteMeeting/{{meeting.meetingId}}">Delete this meeting</a> </div>
+</body>
+</html>

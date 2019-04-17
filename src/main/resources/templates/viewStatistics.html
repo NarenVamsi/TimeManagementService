@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Statistics</title>
+</head>
+<body>
+<div style="width = 80%; height = 5%;margin: auto;"><h1>Time Management Software</h1></div>
+<p><a href="/secretaryGreeting" >Go back home</a></p>
+<p><a href="/logout"> Logout </a></p>
+
+<form action="/viewStatistics" method="post">
+    <div><label> Executive Name : <input type="text" name="executiveId" required/> </label></div>
+    <div><label> Start Date: <input type="date" name="startDate" required/> </label></div>
+    <div><label> End Date: <input type="date" name="endDate" required/> </label></div>
+    <div><input type="submit" value="Get Statistics"/></div>
+
+    {% if msg == "noError" %}
+        <p> Employee Name : {{ employee }} </p>
+        <p> Minutes Spent in Meetings : {{ minutes }} </p>
+        <p> Leaves : {{ leaves }} </p>
+    {% else %}
+        {{ msg }}
+    {% endif %}
+
+</form>
+</body>
+</html>

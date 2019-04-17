@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Meetings</title>
+</head>
+<body>
+<div style="width = 80%; height = 5%;margin: auto;"><h1>Time Management Software</h1></div>
+<a href="/greeting">Go back home</a>
+<form action="/viewMeetings" , method = "get">
+    <div><label> Date: <input type="date" name="date" required/> </label></div>
+    <div><input type="submit" value="View"/></div>
+
+</form>
+
+{% if msg != "Meeting is present" %}
+    {{msg}}
+{% else %}
+
+    {% for meeting in meetings %}
+<div class="meeting" style="border:2px solid red;">
+<a href="/updateCurrentMeeting/{{meeting.meetingId}}" target="_blank"> Meeting Id : {{meeting["meetingId"] }} </a>
+        <p>Start Hour : {{meeting["startHour"] }}</p>
+        <p>Start Minute : {{meeting["startMinute"] }}</p>
+        <p>End Hour : {{meeting["endHour"] }}</p>
+        <p>End Minute : {{meeting["endMinute"] }}</p>
+        <p>Description : {{meeting.description}}</p>
+</div>
+    {% endfor %}
+{% endif %}
+</body>
+</html>

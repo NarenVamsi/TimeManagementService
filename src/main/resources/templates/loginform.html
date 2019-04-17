@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+</head>
+<body>
+<div style="width = 80%; height = 5%;margin: auto;"><h1>Time Management Software</h1></div>
+<form action="/login" method="post">
+    <div><label> User Name : <input type="text" name="username" required/> </label></div>
+    <div><label> Password: <input type="password" name="password" required/> </label></div>
+    <div><input type="submit" value="Sign In"/></div>
+    {% if error != "noError" %}
+        {{error}}
+    {% endif %}
+    <p>Click here to <a href="/registerform">Register</a> </p>
+</form>
+</body>
+</html>

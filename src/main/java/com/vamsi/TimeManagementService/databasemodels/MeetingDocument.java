@@ -5,6 +5,7 @@ import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Date;
 import java.sql.Timestamp;
 import java.util.List;
 
@@ -17,8 +18,10 @@ public class MeetingDocument {
     private int meetingId;
     private String meetingInitiator;
     private String meetingName;
-    private Timestamp startTime;
-    private Timestamp endTime;
+    private Date date;
+    private boolean leave;
+    private Date startTime;
+    private Date endTime;
     private String description;
     private List<String> executiveIdList;
     private List<String> clientList;

@@ -10,5 +10,5 @@ import java.util.List;
 @Getter
 public class DailyScheduleDocument {
     private Date date;
-    private List<Integer> meetingId;
+    private List<Integer> meetingIdList;
 }

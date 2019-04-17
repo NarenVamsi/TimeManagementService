@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UserProfile</title>
+</head>
+<body>
+<div style="width = 80%; height = 5%;margin: auto;"><h1>Time Management Software</h1></div>
+<a href="/greeting">Go back home</a>
+<form action="/userProfile" method="post">
+    <div><label>First Name: <input type="text" name="firstName" value={{userDocument.firstName}} required/></label></div>
+    <div><label>Last Name: <input type="text" name="lastName" value={{userDocument.lastName}} required/></label></div>
+    <div><label>Phone Number: <input type="number" name="phoneNumber" value={{userDocument.phoneNumber}} required/> </label></div>
+    <div><label>Email: <input type="email" name="email" value={{userDocument.email}} required/> </label></div>
+    <div><input type="submit" value="Update"/></div>
+</form>
+</body>
+</html>

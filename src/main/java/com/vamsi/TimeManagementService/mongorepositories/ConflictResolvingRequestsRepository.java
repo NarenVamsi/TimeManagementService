@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ConflictResolvingRequestsRepository extends MongoRepository<ConflictResolvingRequestDocument, String> {
 
-    @Query("{'meetingId':?0}")
+    @Query("{'meetingIdList':?0}")
     ConflictResolvingRequestDocument findByMeetingId(int meetingId);
 }

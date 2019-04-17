@@ -5,6 +5,8 @@ import com.vamsi.TimeManagementService.mongorepositories.ConflictResolvingReques
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service("conflictResolvingRequestStore")
 public class ConflictResolvingRequestStore {
 
@@ -22,4 +24,9 @@ public class ConflictResolvingRequestStore {
     public ConflictResolvingRequestDocument findByMeetingId(int meetingId){
         return conflictResolvingRequestsRepository.findByMeetingId(meetingId);
     }
+
+    public List<ConflictResolvingRequestDocument> findAll() {
+        return conflictResolvingRequestsRepository.findAll();
+    }
+
 }

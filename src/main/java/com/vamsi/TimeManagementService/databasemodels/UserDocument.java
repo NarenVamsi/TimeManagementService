@@ -20,12 +20,5 @@ public class UserDocument {
     private String lastName;
     private Long phoneNumber;
 
-//    @Override
-//    public String toString() {
-//        StringBuilder str = new StringBuilder();
-//        str.append("Id:- " + getId() + ", EmployeeCode:- " + getEmployeeCode() + ", EmployeeId:- " + getEmployeeId()
-//        + ", Email:- " + getEmail() + ", UserName:- " + getUserName() + ", Password:- " + getPassword()
-//        + ", FirstName:- " + getFirstName() + ", LastName:- " + getLastName() + ", PhoneNumber:- " + getPhoneNumber());
-//        return str.toString();
-//    }
+
 }

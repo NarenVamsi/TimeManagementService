@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client Meeting</title>
+</head>
+<body>
+<div style="width = 80%; height = 5%;margin: auto;"><h1>Time Management Software</h1></div>
+<a href="/greeting">Go back home</a>
+    <form action="/updateClientMeeting" method="post">
+        <div><label> Date : <input type="date" name="date" required/> </label></div>
+        <div><label> Description : <input type="text" name="description" required/> </label></div>
+        <div><label> Start Hour : <input type="number" name="startHour" min="9" max="16" required/> </label></div>
+        <div><label> End Hour : <input type="number" name="endHour" min="9" max="16" required/> </label></div>
+        <div><label> Start Minute : <input type="number" name="startMinute" min="0" max="59" required/> </label></div>
+        <div><label> End Minute : <input type="number" name="endMinute" min="0" max="59" required/> </label></div>
+        <div><input type="submit" value="Update Meeting"/></div>
+        {% if msg != "noError" %}
+            {{msg}}
+        {% endif %}
+    </form>
+</body>
+</html>

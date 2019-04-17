@@ -6,6 +6,8 @@ import com.vamsi.TimeManagementService.mongorepositories.MeetingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service("meetingStore")
 public class MeetingStore {
 
@@ -16,12 +18,21 @@ public class MeetingStore {
         meetingRepository.insert(meetingDocument);
     }
 
-    public MeetingDocument findByMeetingId(MeetingDocument meetingDocument) {
-        return meetingRepository.findByMeetingId(meetingDocument.getMeetingId());
+    public List<MeetingDocument> findAll() {
+        return meetingRepository.findAll();
+    }
+
+
+    public MeetingDocument findByMeetingId(int meetingId) {
+        return meetingRepository.findByMeetingId(meetingId);
+    }
+
+    public void save(MeetingDocument meetingDocument) {
+        meetingRepository.save(meetingDocument);
     }
 
     public void delete(MeetingDocument meetingDocument) {
-        meetingRepository.delete(findByMeetingId(meetingDocument));
+        meetingRepository.delete(meetingDocument);
     }
 
 }
